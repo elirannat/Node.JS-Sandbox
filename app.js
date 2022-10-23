@@ -27,7 +27,7 @@ app.get("/query", (req, res, next) => {
 });
 
 // request body
-app.get(express.json());
+app.use(express.json());
 app.get("/body", (req, res, next) => {
     const body = req.body;
     console.log(chalk.yellowBright("request body: "), body);
